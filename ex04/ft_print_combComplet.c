@@ -5,14 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/11 02:27:23 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/11 02:50:58 by aourika          ###   ########.fr       */
+/*   Created: 2018/07/10 17:57:29 by aourika           #+#    #+#             */
+/*   Updated: 2018/07/11 02:40:32 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print(int a, int b, int c)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int ft_print(int a,int b,int c)
 {
 	ft_putchar(48 + a);
 	ft_putchar(48 + b);
@@ -22,30 +27,36 @@ void	ft_print(int a, int b, int c)
 		ft_putchar(',');
 		ft_putchar(' ');
 	}
+	return (0);
 }
 
 void	ft_print_comb(void)
 {
-	int a;
-	int b;
-	int c;
+		int a;
+		int b;
+		int c;
 
-	a = 0;
-	b = 0;
-	c = 0;
-	while (a <= 9)
-	{
-		b = a + 1;
-		while (b <= 9)
+		a = 0;
+		b = 0;
+		c = 0;
+		while (a <= 9)
 		{
-			c = b + 1;
-			while (c <= 9)
+			b = a + 1;
+			while (b <= 9)
 			{
-				ft_print(a, b, c);
+				c = b + 1;
+				while (c <= 9)
+				{
+				ft_print(a,b,c);
 				c++;
+				}
+				b++;
 			}
-			b++;
+			a++;
 		}
-		a++;
-	}
+}
+
+int		main(void)
+{
+	ft_print_comb();
 }

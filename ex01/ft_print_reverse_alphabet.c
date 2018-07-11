@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/10 17:37:19 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/10 17:38:51 by aourika          ###   ########.fr       */
+/*   Created: 2018/07/10 23:36:34 by aourika           #+#    #+#             */
+/*   Updated: 2018/07/10 23:44:06 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char c)
 {
-	char digit;
+	write(1, &c, 1);
+}
 
-	digit = '0';
-	while (digit <= '9')
+void	ft_print_reverse_alphabet(void)
+{
+	int	u;
+
+	u = 'z';
+	while (u >= 'a')
 	{
-		ft_putchar(digit);
-		digit++;
+		ft_putchar(u);
+		u--;
 	}
+}
+
+int		main(void)
+{
+	ft_print_reverse_alphabet();
+	return (0);
 }

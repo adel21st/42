@@ -6,15 +6,16 @@
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 17:23:47 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/10 17:25:24 by aourika          ###   ########.fr       */
+/*   Updated: 2018/07/10 23:16:19 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_putchar.c"
+#include "main.c"
 
-int		ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	char a;
+	char u;
 
 	u = 'a';
 	while (u <= 'z')

@@ -1,51 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/11 02:27:23 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/11 02:50:58 by aourika          ###   ########.fr       */
+/*   Created: 2018/07/10 23:46:04 by aourika           #+#    #+#             */
+/*   Updated: 2018/07/11 01:29:26 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print(int a, int b, int c)
+int		ft_putchar(char c)
 {
-	ft_putchar(48 + a);
-	ft_putchar(48 + b);
-	ft_putchar(48 + c);
-	if (!(a == 7 && b == 8 && c == 9))
+	write(1, &c, 1);
+	return (0);
+}
+
+void	ft_print_number(void)
+{
+	int a;
+
+	a = '0';
+	while (a <= '9')
 	{
-		ft_putchar(',');
-		ft_putchar(' ');
+		ft_putchar(a);
+		a++;
 	}
 }
 
-void	ft_print_comb(void)
+int		main(void)
 {
-	int a;
-	int b;
-	int c;
-
-	a = 0;
-	b = 0;
-	c = 0;
-	while (a <= 9)
-	{
-		b = a + 1;
-		while (b <= 9)
-		{
-			c = b + 1;
-			while (c <= 9)
-			{
-				ft_print(a, b, c);
-				c++;
-			}
-			b++;
-		}
-		a++;
-	}
+	ft_print_number();
+	return (0);
 }
