@@ -6,10 +6,11 @@
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 17:23:47 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/11 14:40:58 by aourika          ###   ########.fr       */
+/*   Updated: 2018/07/11 14:53:36 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_putchar.c"
+
+int		ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {

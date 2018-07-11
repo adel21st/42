@@ -6,17 +6,11 @@
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 23:46:04 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/11 01:29:26 by aourika          ###   ########.fr       */
+/*   Updated: 2018/07/11 15:02:38 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int		ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (0);
-}
+int		ft_putchar(char c);
 
 void	ft_print_number(void)
 {
@@ -28,10 +22,4 @@ void	ft_print_number(void)
 		ft_putchar(a);
 		a++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_number();
-	return (0);
 }

@@ -6,9 +6,11 @@
 /*   By: aourika <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 18:34:19 by aourika           #+#    #+#             */
-/*   Updated: 2018/07/10 18:37:15 by aourika          ###   ########.fr       */
+/*   Updated: 2018/07/11 15:56:30 by aourika          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
@@ -22,6 +24,8 @@ void	ft_putnbr(int nb)
 	else
 		nbr = nb;
 	if (nbr >= 10)
-		ft_putnbr(nbr / 10);
-	ft_putchar(nbr % 10 + 48);
+	{
+		ft_putnbr(nbr / 10 + 48);
+		ft_putchar(nbr % 10 + 48);
+	}
 }
